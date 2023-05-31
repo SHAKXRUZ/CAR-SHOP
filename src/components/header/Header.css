@@ -1,0 +1,147 @@
+.header {
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.header_container {
+    max-width: 1252px;
+    margin: 0 auto;
+}
+
+.header_content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0px;
+}
+
+.header_content_left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header_pages_name_text1 {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.header_pages_name_text2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.header_content_right {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.header_admin_panel_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 192px;
+    height: 48px;
+    background: #2A85FF;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #FCFCFC;
+    border: 1px solid transparent;
+    transition: .5s;
+}
+
+.header_admin_panel_link_icons {
+    font-size: 22px;
+}
+
+.header_admin_panel_link:hover {
+    transition: .5s;
+    color: dodgerblue;
+    background-color: white;
+    border-color: dodgerblue;
+}
+
+.header_user_profel_link {
+    text-decoration: none;
+    border: 3px solid green;
+    border-radius: 50%;
+}
+
+.header_user_images {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+
+@media only screen and (max-width:768px) {
+    .header {
+        padding: 0px 10px;
+    }
+
+    .header_content {
+        padding: 25px 0px;
+    }
+
+    .header_content_left {
+        gap: 5px;
+    }
+
+    .header_pages_name_text2 {
+        gap: 5px;
+    }
+
+    .header_content_right {
+        gap: 30px;
+    }
+
+    .header_admin_panel_link {
+        width: 150px;
+        height: 40px;
+        border-radius: 10px;
+        font-size: 14px;
+    }
+
+    .header_admin_panel_link_icons {
+        font-size: 20px;
+    }
+
+    .header_user_images {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+    }
+}
+
+@media only screen and (max-width:550px) {
+    .header_content {
+        padding: 10px 0px;
+    }
+
+    .header_content_left {
+        display: none;
+    }
+
+    .header_content_right {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
