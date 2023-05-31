@@ -1,0 +1,85 @@
+.admin_sidebar {
+    width: 25%;
+    height: 100vh;
+    background: #FCFCFC;
+    border-right: 1px solid gray;
+}
+
+.admin_sidebar_container {
+    padding: 158px 0px 0px 38px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.admin_sidebar_pages_link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #6F767E;
+    transition: .5s;
+}
+
+.admin_sidebar_pages_link_icons {
+    font-size: 22px;
+}
+
+.admin_sidebar_pages_link:hover {
+    color: dodgerblue;
+    transition: .5s;
+}
+
+
+@media only screen and (max-width:900px) {
+
+    .admin_sidebar_container {
+        padding: 100px 10px 0px 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+
+    .admin_sidebar_container {
+        gap: 20px;
+    }
+
+    .admin_sidebar_pages_link {
+        gap: 10px;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .admin_sidebar_pages_link_icons {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width:600px) {
+
+    .admin_sidebar_pages_name_text {
+        display: none;
+    }
+
+    .admin_sidebar {
+        width: auto;
+        background: white;
+    }
+
+    .admin_sidebar_container {
+        padding: 100px 10px 0px 10px;
+        gap: 20px;
+    }
+
+    .admin_sidebar_pages_link_icons {
+        font-size: 25px;
+    }
+
+}

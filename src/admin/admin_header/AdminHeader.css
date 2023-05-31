@@ -1,0 +1,114 @@
+.admin_header {
+    width: 100%;
+    border-bottom: 1px solid gray;
+}
+
+.admin_header_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 40px;
+}
+
+.admin_header_modellar_pages_link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid transparent;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #FCFCFC;
+    width: 192px;
+    height: 48px;
+    background: #2A85FF;
+    border-radius: 12px;
+    border: 1px solid transparent;
+}
+
+.admin_header_modellar_pages_link_icons {
+    font-size: 22px;
+}
+
+.admin_header_modellar_pages_link:hover {
+    color: dodgerblue;
+    background-color: white;
+    transition: .5s;
+    border-color: dodgerblue;
+}
+
+.admin_header_right_content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.admin_header_bell_icons {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.admin_panel_user_profel_link {
+    text-decoration: none;
+    border: 3px solid green;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.admin_panel_user_profel_images {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+@media only screen and (max-width:768px) {
+
+    .admin_header_container {
+        padding: 20px 20px;
+    }
+
+    .admin_header_modellar_pages_link {
+        gap: 5px;
+        font-size: 14px;
+        line-height: 22px;
+        width: 170px;
+        height: 45px;
+        border-radius: 10px;
+    }
+
+    .admin_header_right_content {
+        gap: 20px;
+    }
+
+    .admin_panel_user_profel_images {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media only screen and (max-width:600px) {
+
+    .admin_header_container {
+        padding: 10px 10px;
+    }
+
+    .admin_header_modellar_pages_link_text {
+        display: none;
+    }
+
+    .admin_header_modellar_pages_link {
+        width: 50px;
+        height: 40px;
+    }
+
+    .admin_panel_user_profel_link {
+        border: 0px solid transparent;
+    }
+
+    .admin_panel_user_profel_images {
+        border: 3px solid green;
+    }
+}
