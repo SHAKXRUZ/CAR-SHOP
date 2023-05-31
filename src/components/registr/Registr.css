@@ -1,0 +1,123 @@
+.registr {
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.registr_container {
+    max-width: 1440px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.registr_title {
+    font-size: 38px;
+    color: dodgerblue;
+}
+
+.registr_form {
+    width: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+
+.registr_input {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    padding: 0px 10px;
+    color: dodgerblue;
+    font-size: 16px;
+    border: 1px solid transparent;
+    background-color: #ccc2c26f;
+}
+
+
+
+.registr_file_input {
+    display: none;
+}
+
+.registr_input_file_div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.registr_input_file_div_icons {
+    color: gray;
+    font-size: 18px;
+}
+
+.registr_input_file_div_text {
+    color: gray;
+}
+
+.login_pages_link {
+    text-align: end;
+    text-decoration: none;
+    font-size: 18px;
+    color: dodgerblue;
+}
+
+.registr_btn {
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    background-color: dodgerblue;
+    color: white;
+    transition: .5s;
+    font-size: 18px;
+    font-weight: 600;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.registr_btn:hover {
+    transition: .5s;
+    color: dodgerblue;
+    background-color: white;
+    border-color: dodgerblue;
+}
+
+
+@media only screen and (max-width:500px) {
+    .registr {
+        padding: 0px 10px;
+    }
+
+    .registr_container {
+        gap: 10px;
+    }
+
+    .registr_title {
+        font-size: 32px;
+    }
+
+    .registr_form {
+        width: 100%;
+        padding: 25px;
+        gap: 20px;
+    }
+}
+
+
+@media only screen and (max-width:400px) {
+    .registr_form {
+        padding: 15px;
+        gap: 10px;
+    }
+}
