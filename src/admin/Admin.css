@@ -1,0 +1,18 @@
+.admin {
+    width: 100%;
+    padding: 0px 20px;
+
+}
+
+.admin_container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.admin_panel_flex {
+    display: flex;
+}
+
+.admin_panel_routerlar {
+    width: 100%;
+}
