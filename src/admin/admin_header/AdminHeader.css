@@ -1,6 +1,7 @@
 .admin_header {
     width: 100%;
     border-bottom: 1px solid gray;
+    background-color: white;
 }
 
 .admin_header_container {

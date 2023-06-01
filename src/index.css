@@ -4,3 +4,12 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: dodgerblue;
+  border-radius: 20px;
+}

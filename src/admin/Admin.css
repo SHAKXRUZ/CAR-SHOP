@@ -7,6 +7,7 @@
 .admin_container {
     max-width: 1440px;
     margin: 0 auto;
+    position: relative;
 }
 
 .admin_panel_flex {
@@ -17,8 +18,25 @@
     width: 100%;
 }
 
+.admin_panel_pages {
+    background-color: #E3E3E3;
+    padding: 40px;
+}
+
+@media only screen and (max-width:1000px) {
+    .admin_panel_pages {
+        padding: 20px;
+    }
+}
+
 @media only screen and (max-width:768px) {
     .admin {
         padding: 0px 10px;
+    }
+}
+
+@media only screen and (max-width:450px) {
+    .admin_panel_pages {
+        padding: 10px;
     }
 }
