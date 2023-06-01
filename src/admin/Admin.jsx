@@ -20,7 +20,8 @@ const Admin = () => {
               <AdminSidebar />
               <div className="admin_panel_routerlar">
                 <AdminHeader />
-                <Route exact path="/admin/panel">
+               <div className="admin_panel_pages">
+               <Route exact path="/admin/panel">
                   <Categoriy />
                 </Route>
                 <Route path="/admin/panel/cars">
@@ -29,6 +30,7 @@ const Admin = () => {
                 <Route path="/admin/panel/users">
                   <Users />
                 </Route>
+               </div>
               </div>
             </div>
           </Route>
