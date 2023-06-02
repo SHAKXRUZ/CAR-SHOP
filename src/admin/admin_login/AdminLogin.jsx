@@ -1,27 +1,45 @@
 import "./AdminLogin.css";
 const AdminLogin = () => {
-  // if (!localStorage.getItem("token")) {
-  //   window.location = "/login";
-  // }
+  if (!localStorage.getItem("token")) {
+    window.location = "/login";
+  }
+
+  if (
+    window.location.pathname === "/admin" &&
+    localStorage.getItem("admin_token")
+  ) {
+    localStorage.removeItem("admin_token");
+  }
+
+  let tokens = localStorage.getItem("token");
 
   const adminLogin = async (e) => {
     e.preventDefault();
     const { admin_email, admin_password } = e.target;
-    console.log(admin_email.value);
-    console.log(admin_password.value);
 
-    //   await fetch("http://localhost:5000/admin/login", {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify({
-    //       email: admin_email.value,
-    //       password: admin_password.value,
-    //     }),
-    //   })
-    //     .then((res) => res.json())
-    //     .then((data) => {
-    //       alert(data.msg);
-    //     });
+    await fetch("http://localhost:5000/admin/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", token: tokens },
+      body: JSON.stringify({
+        email: admin_email.value,
+        password: admin_password.value,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        alert(data.msg);
+        if (data.msg === "You are not an admin?") {
+          admin_email.value = "";
+          admin_password.value = "";
+          window.location = "/modellar";
+        }
+        if (data.msg === "Success!" && data.admin_token) {
+          admin_email.value = "";
+          admin_password.value = "";
+          window.location = "/admin/panel";
+          localStorage.setItem("admin_token", data.admin_token);
+        }
+      });
   };
 
   return (
@@ -39,7 +57,7 @@ const AdminLogin = () => {
             maxLength={35}
           />
           <input
-            type="text"
+            type="password"
             className="admin_login_input"
             name="admin_password"
             placeholder="Enter password..."

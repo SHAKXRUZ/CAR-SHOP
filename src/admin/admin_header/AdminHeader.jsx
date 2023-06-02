@@ -4,9 +4,11 @@ import { AiOutlineUser } from "react-icons/ai";
 import { BiBell } from "react-icons/bi";
 import UserImages from "../../assets/images/Без названия.png";
 const AdminHeader = () => {
-  // if (!localStorage.getItem("admin_token")) {
-  //   window.location = "/admin";
-  // }
+  if (!localStorage.getItem("admin_token")) {
+    window.location = "/admin";
+  } else if (!localStorage.getItem("token")) {
+    window.location = "/login";
+  }
 
   return (
     <div className="admin_header">

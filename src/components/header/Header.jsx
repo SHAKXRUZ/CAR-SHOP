@@ -2,14 +2,28 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import { AiOutlineUser } from "react-icons/ai";
-
-import userImages from "../../assets/images/Без названия.png";
+import { useEffect, useState } from "react";
 
 const Header = () => {
+  if (localStorage.getItem("admin_token")) {
+    localStorage.removeItem("admin_token");
+  }
   let carTur =
     window.location.pathname === "/turlari" ||
     window.location.pathname === "/one";
+  const [user_images, setUser_images] = useState("");
 
+  useEffect(() => {
+    fetch("http://localhost:5000/users/profel_images", {
+      method: "GET",
+      headers: {
+        token: localStorage.getItem("token"),
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => setUser_images(data.userImagesUrl));
+  }, []);
+  console.log(user_images);
   return (
     <div className="header">
       <div className="header_container">
@@ -38,7 +52,7 @@ const Header = () => {
             <Link to="/profel" className="header_user_profel_link">
               <img
                 className="header_user_images"
-                src={userImages}
+                src={user_images}
                 alt="user_images"
               />
             </Link>
