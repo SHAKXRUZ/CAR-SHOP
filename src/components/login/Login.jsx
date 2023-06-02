@@ -7,21 +7,30 @@ const Login = () => {
   const userLogin = async (e) => {
     e.preventDefault();
     const { email, password } = e.target;
-    console.log(email.value);
-    console.log(password.value);
 
-    //   await fetch("http://localhost:5000/users/login", {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify({
-    //       email: email.value,
-    //       password: password.value,
-    //     }),
-    //   })
-    //     .then((res) => res.json())
-    //     .then((data) => {
-    //       alert(data.msg);
-    //     });
+    await fetch("http://localhost:5000/users/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: email.value,
+        password: password.value,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        alert(data.msg);
+        if (data.msg === "Success!" && data.token) {
+          email.value = "";
+          password.value = "";
+          window.location = "/modellar";
+          localStorage.setItem("token", data.token);
+        }
+        if (data.msg === "Email not found!") {
+          email.value = "";
+          password.value = "";
+          window.location = "/";
+        }
+      });
   };
 
   return (
@@ -39,7 +48,7 @@ const Login = () => {
             maxLength={35}
           />
           <input
-            type="text"
+            type="password"
             className="login_input"
             name="password"
             placeholder="Enter password..."

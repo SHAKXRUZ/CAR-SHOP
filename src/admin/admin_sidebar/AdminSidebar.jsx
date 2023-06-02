@@ -5,11 +5,11 @@ import { FaCarSide } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { TbArrowBack } from "react-icons/tb";
 const AdminSidebar = () => {
-  // if (!localStorage.getItem("admin_token")) {
-  //   window.location = "/admin";
-  // } else if (!localStorage.getItem("token")) {
-  //   window.location = "/login";
-  // }
+  if (!localStorage.getItem("admin_token")) {
+    window.location = "/admin";
+  } else if (!localStorage.getItem("token")) {
+    window.location = "/login";
+  }
 
   return (
     <div className="admin_sidebar">

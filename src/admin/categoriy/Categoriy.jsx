@@ -4,6 +4,11 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { MdAddAPhoto } from "react-icons/md";
 import { FiX } from "react-icons/fi";
 const Categoriy = () => {
+  if (!localStorage.getItem("admin_token")) {
+    window.location = "/admin";
+  } else if (!localStorage.getItem("token")) {
+    window.location = "/login";
+  }
   const [categoriyModal, setCategoriyModal] = useState(false);
 
   const [categoriy_images, setCategoriy_images] = useState("");
@@ -71,7 +76,9 @@ const Categoriy = () => {
             className="categoriy_header_right"
           >
             <AiOutlinePlus className="categoriy_header_right_icons" />
-            <p className="admin_panel_categoriy_qushish_text_none">Kategoriya qo'shish</p>
+            <p className="admin_panel_categoriy_qushish_text_none">
+              Kategoriya qo'shish
+            </p>
           </button>
         </div>
 
