@@ -35,26 +35,36 @@ const Registr = () => {
   const userRegistr = async (e) => {
     e.preventDefault();
 
-    // const { username, email, password } = e.target;
+    const { username, email, password } = e.target;
 
-    // if (registrImages) {
-    //   await fetch("http://localhost:5000/users/registr", {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify({
-    //       username: username.value,
-    //       email: email.value,
-    //       password: password.value,
-    //       registrImages,
-    //     }),
-    //   })
-    //     .then((res) => res.json())
-    //     .then((data) => {
-    //       alert(data.msg);
-    //     });
-    // } else {
-    //   alert("Images required?");
-    // }
+    if (registrImages) {
+      await fetch("http://localhost:5000/users/registr", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username: username.value,
+          email: email.value,
+          password: password.value,
+          registrImages,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          alert(data.msg);
+          if (
+            data.msg === "You have registered!" ||
+            data.msg === "You are registered!"
+          ) {
+            username.value = "";
+            email.value = "";
+            password.value = "";
+            setRegistrImages("");
+            window.location = "/login";
+          }
+        });
+    } else {
+      alert("Images required?");
+    }
   };
 
   return (
@@ -81,7 +91,7 @@ const Registr = () => {
             maxLength={35}
           />
           <input
-            type="text"
+            type="password"
             className="registr_input"
             name="password"
             placeholder="Enter password..."
