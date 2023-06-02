@@ -1,0 +1,70 @@
+.admin_cars {
+    width: 100%;
+    height: 540px;
+    background: #FCFCFC;
+    border-radius: 8px;
+}
+
+.admin_cars_container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.cars_header {
+    padding-bottom: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cars_header_left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.cars_header_left_icons {
+    width: 16px;
+    height: 32px;
+    background: #FFD88D;
+    border-radius: 4px;
+}
+
+.cars_header_left_text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    color: #1A1D1F;
+}
+
+.cars_header_right {
+    width: 192px;
+    height: 48px;
+    background: #2A85FF;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #FCFCFC;
+    transition: .5s;
+}
+
+.cars_header_right:hover {
+    color: dodgerblue;
+    background-color: white;
+    border-color: dodgerblue;
+    transition: .5s;
+}
+
+.cars_header_right_icons {
+    font-size: 22px;
+}
