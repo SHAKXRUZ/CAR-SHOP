@@ -1,5 +1,5 @@
 import "./Categoriy.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 import { MdAddAPhoto } from "react-icons/md";
 import { FiX } from "react-icons/fi";
@@ -12,6 +12,8 @@ const Categoriy = () => {
   const [categoriyModal, setCategoriyModal] = useState(false);
 
   const [categoriy_images, setCategoriy_images] = useState("");
+
+  const [categoriyData, setCategoriyData] = useState([]);
 
   const uploadCategoriyImages = async (e) => {
     const files = e.target.files;
@@ -42,25 +44,43 @@ const Categoriy = () => {
     const { title } = e.target;
 
     if (categoriy_images) {
-      console.log(title.value);
-      console.log(categoriy_images);
-
-      // await fetch("http://localhost:5000/admin/categoriy", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify({
-      //     title,
-      //     categoriy_images,
-      //   }),
-      // })
-      //   .then((res) => res.json())
-      //   .then((data) => {
-      //     alert(data.msg);
-      //   });
+      await fetch("http://localhost:5000/admin/create_categoriy", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          token: localStorage.getItem("token"),
+        },
+        body: JSON.stringify({
+          title: title.value,
+          categoriy_images,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          alert(data.msg);
+          if (
+            data.msg === "You are categoriy!" ||
+            data.msg === "Create categoriy!"
+          ) {
+            title.value = "";
+            setCategoriy_images("");
+          }
+        });
     } else {
       alert("Images required?");
     }
   };
+
+  useEffect(() => {
+    fetch("http://localhost:5000/admin/categoriy_list", {
+      method: "GET",
+      headers: {
+        token: localStorage.getItem("token"),
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => setCategoriyData(data));
+  }, []);
 
   return (
     <div className="admin_categoriy">
@@ -82,7 +102,13 @@ const Categoriy = () => {
           </button>
         </div>
 
-        <div className="categoriy_data_content"></div>
+        <div className="categoriy_data_content">
+          {categoriyData.length !== 0 ? (
+            categoriyData.map((c, idx) => <div key={idx}>{c.title}</div>)
+          ) : (
+            <p>Categoriyalar mavjud emas?</p>
+          )}
+        </div>
 
         {categoriyModal && (
           <div className="admin_categoriy_modal">

@@ -23,7 +23,7 @@ const Header = () => {
       .then((res) => res.json())
       .then((data) => setUser_images(data.userImagesUrl));
   }, []);
-  console.log(user_images);
+
   return (
     <div className="header">
       <div className="header_container">
