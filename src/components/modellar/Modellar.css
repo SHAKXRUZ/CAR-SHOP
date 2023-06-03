@@ -1,0 +1,134 @@
+.modellar {
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.modellar_container {
+    max-width: 1252px;
+    margin: 0 auto;
+}
+
+.modellar_pages_title {
+    margin-bottom: 48px;
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 63px;
+    color: #000000;
+}
+
+.modellar_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 32px;
+}
+
+.modellar_card {
+    text-decoration: none;
+}
+
+.modellar_card_images {
+    width: 289px;
+    height: 220px;
+    margin-bottom: 16px;
+}
+
+.modellar_card_title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: #000000;
+    text-align: center;
+}
+
+
+
+@media only screen and (max-width:1300px) {
+    .modellar_content {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+    }
+
+    .modellar_card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .modellar_card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+    }
+
+
+    .modellar_pages_title {
+        margin-bottom: 25px;
+        font-size: 38px;
+        line-height: 55px;
+    }
+
+    .modellar_content {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 25px;
+    }
+
+    .modellar_card_images {
+        width: 250px;
+        height: 200px;
+        margin-bottom: 10px;
+    }
+
+    .modellar_card_title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+
+@media only screen and (max-width:850px) {
+
+    .modellar_pages_title {
+        margin-bottom: 20px;
+        font-size: 26px;
+        line-height: 38px;
+    }
+
+    .modellar_content {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .modellar {
+        padding: 0px 10px;
+    }
+}
+
+@media only screen and (max-width:600px) {
+
+    .modellar_card_images {
+        width: 200px;
+        height: 180px;
+    }
+
+    .modellar_card_title {
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .modellar_content {
+        grid-template-columns: 1fr;
+    }
+
+    .modellar_card {
+        border: 1px solid dodgerblue;
+    }
+}
