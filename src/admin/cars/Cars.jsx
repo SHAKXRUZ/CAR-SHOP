@@ -4,8 +4,8 @@ import { AiOutlinePlus } from "react-icons/ai";
 // import { MdAddAPhoto } from "react-icons/md";
 // import { FiX } from "react-icons/fi";
 const Cars = () => {
-  // const [carsModal, setCarsModal] = useState(false);
-
+  //   const [carsModal, setCarsModal] = useState(false);
+  // console.log(carsModal);
   return (
     <div className="admin_cars">
       <div className="admin_cars_container">
@@ -27,7 +27,6 @@ const Cars = () => {
         </div>
 
         <div className="cars_data_content"></div>
-
       </div>
     </div>
   );

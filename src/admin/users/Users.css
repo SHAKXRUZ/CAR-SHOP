@@ -1,0 +1,133 @@
+.admin_user {
+    width: 100%;
+    height: 540px;
+    background: #FCFCFC;
+    border-radius: 8px;
+}
+
+.admin_user_container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.user_header {
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.user_header_left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.user_header_left_icons {
+    width: 16px;
+    height: 32px;
+    background: #FFD88D;
+    border-radius: 4px;
+}
+
+.user_header_left_text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    color: #1A1D1F;
+}
+
+
+.user_search_form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.user_search_input {
+    width: 100%;
+    height: 35px;
+    outline: none;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid transparent;
+    padding: 0px 10px;
+    color: dodgerblue;
+    background-color: #e7e4e0;
+}
+
+.user_form_btn {
+    width: 35px;
+    height: 35px;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 0px 10px 10px 0px;
+    transition: .5s;
+    background-color: dodgerblue;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+
+.user_form_btn:hover {
+    color: dodgerblue;
+    background-color: white;
+    border-color: dodgerblue;
+    transition: .5s;
+}
+
+
+
+/* user data map code */
+.users_data_map {
+    height: 400px;
+    overflow: auto;
+    border: 1px solid black;
+}
+
+
+/* user table code */
+.user_table_text_name {
+    display: flex;
+    align-items: center;
+}
+
+.user_table_id {
+    width: 24px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: #6F767E;
+}
+
+.user_table_username {
+    width: 200px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: #6F767E;
+}
+
+.user_table_email {
+    width: 350px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: #6F767E;
+}
+
+.user_table_password {
+    width: 150px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: #6F767E;
+}
