@@ -12,10 +12,11 @@
 }
 
 .cars_header {
-    padding-bottom: 44px;
+    padding-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 30px;
 }
 
 .cars_header_left {
@@ -67,4 +68,592 @@
 
 .cars_header_right_icons {
     font-size: 22px;
+}
+
+
+.cars_search_form {
+    display: flex;
+    align-items: center;
+}
+
+.cars_search_form_input {
+    width: 350px;
+    height: 35px;
+    outline: none;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid transparent;
+    padding: 0px 10px;
+    color: dodgerblue;
+    background-color: #e7e4e0;
+}
+
+.cars_search_form_btn {
+    width: 35px;
+    height: 35px;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 0px 10px 10px 0px;
+    transition: .5s;
+    background-color: dodgerblue;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.cars_search_form_btn:hover {
+    color: dodgerblue;
+    background-color: white;
+    border-color: dodgerblue;
+    transition: .5s;
+}
+
+.cars_search_form_media {
+    display: none;
+}
+
+
+
+/* cars modal header code */
+.admin_cars_modal_owerflow {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background: #F4F4F4;
+    opacity: 0.8;
+}
+
+.admin_cars_modal_content {
+    width: 1164px;
+    height: auto;
+    background: #FCFCFC;
+    box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.05), 0px 32px 48px -8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(16px);
+    border-radius: 15px;
+    position: absolute;
+    top: 420px;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    padding: 20px 20px;
+}
+
+.admin_cars_modal_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.admin_cars_modal_header_left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.admin_cars_modal_header_left_icons {
+    width: 16px;
+    height: 32px;
+    background: #CABDFF;
+    border-radius: 4px;
+}
+
+.admin_cars_modal_header_left_text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    color: #1A1D1F;
+}
+
+.admin_cars_modal_header_right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background: #EFEFEF;
+    color: black;
+    border-radius: 36px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: .5s;
+}
+
+.admin_cars_modal_header_right:hover {
+    color: red;
+    background-color: white;
+    border-color: red;
+    transition: .5s;
+}
+
+
+
+/* admin cars modal form code */
+
+.admin_cars_modal_form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.admin_cars_modal_input_div {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.admin_cars_modal_label {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #33383F;
+}
+
+.admin_cars_modal_select {
+    background: #F4F4F4;
+    border-radius: 12px;
+    width: 100%;
+    outline: none;
+    border: 1px solid transparent;
+    padding: 12px;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #000000;
+}
+
+.admin_cars_modal_input {
+    padding: 12px;
+    outline: none;
+    background: #F4F4F4;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    color: dodgerblue;
+}
+
+
+.admin_cars_modal_images_input_none {
+    display: none;
+}
+
+.admin_cars_modal_images_label {
+    width: 100%;
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #33383F;
+}
+
+.admin_cars_modal_images_div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: #F4F4F4;
+    border-radius: 12px;
+}
+
+.admin_cars_modal_images_icons {
+    font-size: 20px;
+    color: #6F767E;
+}
+
+.admin_cars_modal_images_text {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #9A9FA5;
+}
+
+.admin_cars_form_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    width: 154px;
+    height: 48px;
+    background: #2A85FF;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .5s;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #FCFCFC;
+}
+
+.admin_cars_form_btn:hover {
+    color: dodgerblue;
+    border-color: dodgerblue;
+    background-color: white;
+    transition: .5s;
+}
+
+
+
+/* admin cars data table code */
+
+
+.admin_cars_data_table {
+    display: flex;
+    align-items: center;
+
+}
+
+.admin_cars_data_table_id {
+    width: 50px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: #6F767E;
+}
+
+.admin_cars_data_table_marka {
+    width: 150px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: #6F767E;
+}
+
+.admin_cars_data_table_gearbook {
+    width: 150px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: #6F767E;
+}
+
+.admin_cars_data_table_tanirovkasi {
+    width: 100px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: #6F767E;
+}
+
+.admin_cars_data_table_motor {
+    width: 70px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: #6F767E;
+}
+
+.admin_cars_data_table_year {
+    width: 70px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: #6F767E;
+}
+
+.admin_cars_data_table_color {
+    width: 100px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: #6F767E;
+}
+
+.admin_cars_data_table_distance {
+    width: 100px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: #6F767E;
+}
+
+/* admin cars data map */
+.admin_cars_data_map {
+    max-height: 400px;
+    overflow: auto;
+}
+
+.admin_cars_data_map::-webkit-scrollbar {
+    width: 10px;
+}
+
+.admin_cars_data_map::-webkit-scrollbar-thumb {
+    background-color: dodgerblue;
+    border-radius: 20px;
+}
+
+
+.cars_table_div {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #EFEFEF;
+    padding: 20px 0px;
+}
+
+.cars_data_map_id {
+    width: 50px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #6F767E;
+}
+
+.cars_data_map_name {
+    width: 150px;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #1A1D1F;
+    text-transform: uppercase;
+}
+
+.cars_data_map_gearbook {
+    width: 150px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #1A1D1F;
+    text-transform: capitalize;
+}
+
+.cars_data_map_tanning {
+    width: 100px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #1A1D1F;
+    text-transform: capitalize;
+}
+
+.cars_data_map_motor {
+    width: 70px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #1A1D1F;
+}
+
+.cars_data_map_year {
+    width: 70px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #1A1D1F;
+}
+
+.cars_data_map_color {
+    width: 100px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #1A1D1F;
+}
+
+.cars_data_map_walking {
+    width: 100px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #1A1D1F;
+}
+
+.cars_edit_icons {
+    margin-right: 50px;
+    font-size: 22px;
+    color: dodgerblue;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.cars_edit_icons:hover {
+    color: blue;
+    transition: .5s;
+}
+
+.cars_delete_icons{
+    color: red;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:1200px) {
+
+    .admin_cars_modal_content {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:1130px) {
+
+    .cars_header {
+        gap: 10px;
+    }
+
+    .cars_header_left {
+        gap: 15px;
+    }
+
+    .cars_header_left_icons {
+        width: 15px;
+        height: 30px;
+    }
+
+    .cars_search_form_input {
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width:930px) {
+    .cars_search_form_input {
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .cars_search_form_input {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .cars_search_form_btn {
+        display: none;
+    }
+
+    .cars_header_right {
+        width: 50px;
+        border-radius: 10px;
+    }
+
+    .admin_panel_cars_qushish_text_none {
+        display: none;
+    }
+
+    .cars_header_left_icons {
+        width: 15px;
+        height: 30px;
+    }
+
+    .cars_header_left_text {
+        font-size: 16px;
+        line-height: 28px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .admin_cars_modal_header_left {
+        gap: 15px;
+    }
+
+    .admin_cars_modal_header_left_icons {
+        width: 15px;
+        height: 30px;
+    }
+
+    .admin_cars_modal_header_left_text {
+        font-size: 16px;
+        line-height: 28px;
+    }
+}
+
+@media only screen and (max-width:600px) {
+
+    .admin_cars_modal_content {
+        top: 700px;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .admin_cars_modal_header {
+        margin-bottom: 20px;
+    }
+
+    .admin_cars_modal_input_div {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .admin_cars_modal_label {
+        width: 100%;
+    }
+
+    .admin_cars_modal_input {
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .admin_cars_modal_images_icons {
+        font-size: 18px;
+    }
+
+    .admin_cars_form_btn {
+        width: 130px;
+        height: 45px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+
+    .admin_cars_container {
+        padding: 10px;
+    }
+
+    .cars_header_left {
+        gap: 10px;
+    }
+
+    .cars_search_form {
+        display: none;
+    }
+
+    .cars_search_form_media {
+        display: block;
+    }
+
+    .admin_cars_modal_content {
+        padding: 10px;
+    }
+
+    .admin_cars_modal_header {
+        margin-bottom: 10px;
+    }
+
+    .admin_cars_modal_input_div {
+        flex-direction: column;
+        gap: 20px;
+    }
 }

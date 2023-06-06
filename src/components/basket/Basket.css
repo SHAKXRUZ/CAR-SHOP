@@ -1,0 +1,63 @@
+.basket {
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.basket_container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.basket_content {
+    width: 100%;
+    height: 700px;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.basket_content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.basket_content::-webkit-scrollbar-thumb {
+    background-color: dodgerblue;
+    border-radius: 20px;
+}
+
+.basket_card {
+    width: 150px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.basket_card_images {
+    width: 100%;
+    height: 200px;
+}
+
+.basket_card_cars_name {
+    text-transform: capitalize;
+    font-size: 18px;
+    color: dodgerblue;
+}
+
+.basket_card_cars_narxi {
+    font-size: 16px;
+    color: green;
+}
+
+.basket_card_cars_delete {
+    color: red;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.basket_warning_text {
+    color: gold;
+}

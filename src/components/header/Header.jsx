@@ -2,6 +2,7 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import { AiOutlineUser } from "react-icons/ai";
+import { FiShoppingCart } from "react-icons/fi";
 import { useEffect, useState } from "react";
 
 const Header = () => {
@@ -22,6 +23,19 @@ const Header = () => {
     })
       .then((res) => res.json())
       .then((data) => setUser_images(data.userImagesUrl));
+  }, []);
+
+  const [basketData, setBasketData] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/users/shop_list", {
+      method: "GET",
+      headers: {
+        token: localStorage.getItem("token"),
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => setBasketData(data));
   }, []);
 
   return (
@@ -48,6 +62,10 @@ const Header = () => {
             <Link to="/admin" className="header_admin_panel_link">
               <AiOutlineUser className="header_admin_panel_link_icons" />
               Admin o'tish
+            </Link>
+            <Link className="header_basket" to="/basket">
+              <FiShoppingCart />
+              <p className="header_basket_length">{basketData.length}</p>
             </Link>
             <Link to="/profel" className="header_user_profel_link">
               <img
