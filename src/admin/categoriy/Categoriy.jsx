@@ -161,6 +161,27 @@ const Categoriy = () => {
       });
   };
 
+  const deleteCategoriyFunc = async (c) => {
+    await fetch("http://localhost:5000/admin/categoriy_delete", {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        token: localStorage.getItem("token"),
+        admin_token: localStorage.getItem("admin_token"),
+      },
+      body: JSON.stringify({
+        id: c.id,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        alert(data.msg);
+        if (data.msg === "Categoriy deleted!") {
+          window.location.reload();
+        }
+      });
+  };
+
   return (
     <div className="admin_categoriy">
       <div className="admin_categoriy_container">
@@ -225,7 +246,10 @@ const Categoriy = () => {
                         onClick={() => editCategoriyFunc(c)}
                         className="categoriy_edit_icons"
                       />
-                      <MdDeleteOutline className="categoriy_delete_icons" />
+                      <MdDeleteOutline
+                        onClick={() => deleteCategoriyFunc(c)}
+                        className="categoriy_delete_icons"
+                      />
                     </div>
                   </div>
                 ))
@@ -244,7 +268,10 @@ const Categoriy = () => {
                         onClick={() => editCategoriyFunc(c)}
                         className="categoriy_edit_icons"
                       />
-                      <MdDeleteOutline className="categoriy_delete_icons" />
+                      <MdDeleteOutline
+                        onClick={() => deleteCategoriyFunc(c)}
+                        className="categoriy_delete_icons"
+                      />
                     </div>
                   </div>
                 ))}

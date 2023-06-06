@@ -1,0 +1,93 @@
+.turlari {
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.turlari_container {
+    max-width: 1252px;
+    margin: 0 auto;
+}
+
+.turlari_pages_title {
+    margin-bottom: 48px;
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 63px;
+    color: #000000;
+}
+
+.turlari_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 32px;
+}
+
+.tur_card_content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tur_card {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tur_card_images {
+    width: 289px;
+    height: 220px;
+}
+
+.tur_card_text_div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+}
+
+.tur_card_name {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.tur_card_narxi {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.cars_like_shop_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.cars_shop_icons,
+.cars_like_icons {
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: dodgerblue;
+}
+
+.cars_shop_icons:hover,
+.cars_like_icons:hover {
+    background-color: white;
+    color: dodgerblue;
+    border-color: dodgerblue;
+    transition: .5s;
+}

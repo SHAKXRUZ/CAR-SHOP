@@ -89,6 +89,32 @@
     border-radius: 50%;
 }
 
+.header_basket {
+    color: dodgerblue;
+    font-size: 25px;
+    transition: .5s;
+    position: relative;
+}
+
+.header_basket:hover {
+    color: blue;
+    transition: .5s;
+}
+
+.header_basket_length {
+    font-size: 12px;
+    position: absolute;
+    top: -10px;
+    right: 2px;
+    color: gold;
+    background-color: gray;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 @media only screen and (max-width:768px) {
     .header {

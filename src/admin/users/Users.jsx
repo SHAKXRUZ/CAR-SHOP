@@ -102,7 +102,7 @@ const Users = () => {
         }
         if (
           data.msg === "You can't change the details of a senior admin?" ||
-          data.msg === "You can't change the data of other admins?"
+          data.msg === "You can't change the data of other admins?" || "User updated?"
         ) {
           update_username.value = "";
           update_email.value = "";
@@ -110,6 +110,7 @@ const Users = () => {
           update_role.value = "";
           setUpdateImages("");
         }
+
       });
   };
 
