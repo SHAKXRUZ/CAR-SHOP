@@ -6,7 +6,9 @@ const Profel = () => {
   if (localStorage.getItem("admin_token")) {
     localStorage.removeItem("admin_token");
   }
-  return <div></div>;
+  return <div>
+    
+  </div>;
 };
 
 export default Profel;
