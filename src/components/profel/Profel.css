@@ -1,0 +1,60 @@
+.profel {
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.profel_container {
+    max-width: 1000px;
+    height: 700px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.profel_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.user_profel_images {
+    width: 100px;
+    height: 100px;
+    border-bottom: 1px solid black;
+}
+
+.edit_profel_btn {
+    width: 120px;
+    height: 30px;
+    background-color: dodgerblue;
+    border: 1px solid transparent;
+    transition: .5s;
+    cursor: pointer;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+}
+
+.edit_profel_btn:hover {
+    color: dodgerblue;
+    transition: .5s;
+    border-color: dodgerblue;
+    background-color: white;
+}
+
+.user_profel_data_map_div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user_profel_text_div {
+    display: flex;
+    align-content: center;
+    gap: 10px;
+}
+
+
+.user_profel_text_div_title {
+    font-weight: 700;
+}
