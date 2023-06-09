@@ -28,6 +28,7 @@
     border-radius: 8px;
     padding: 16px 24px;
     gap: 16px;
+
 }
 
 .one_cars_card_left_name {
@@ -75,6 +76,7 @@
 
 .one_cars_card_right {
     width: 100%;
+
 }
 
 .cars_card_right_name {
@@ -109,4 +111,189 @@
 .cars_card_right_images {
     width: 824px;
     height: 444px;
+}
+
+@media only screen and (max-width:1310px) {
+
+    .one_container {
+        max-width: 100%;
+    }
+
+    .one_pages_title {
+        margin-bottom: 40px;
+        font-size: 42px;
+        line-height: 60px;
+    }
+
+    .one_content {
+        gap: 25px;
+    }
+
+    .one_cars_card_left {
+        padding: 20px;
+        gap: 15px;
+
+    }
+
+
+    .one_cars_card_left_img {
+        width: auto;
+    }
+
+    .cars_card_right_name {
+        padding: 20px;
+    }
+
+    .swiper {
+        max-width: 824px;
+        max-height: 444px;
+    }
+
+    .cars_card_right_images {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+@media only screen and (max-width:1225px) {
+
+    .swiper {
+        max-width: 650px;
+        max-height: 400px;
+    }
+
+}
+
+@media only screen and (max-width:1060px) {
+    .swiper {
+        max-width: 500px;
+        max-height: 300px;
+    }
+}
+
+
+
+@media only screen and (max-width:900px) {
+
+    .one_pages_title {
+        margin-bottom: 28px;
+        font-size: 32px;
+        line-height: 44px;
+    }
+
+    .one_content {
+        gap: 20px;
+    }
+
+    .one_cars_card_left {
+        border-radius: 5px;
+        padding: 10px;
+        gap: 10px;
+
+    }
+
+    .one_cars_card_left_name {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .one_cars_card_left_narxi {
+        line-height: 28px;
+    }
+
+    .one_cars_card_left_text {
+        line-height: 28px;
+    }
+
+    .one_cars_card_left_text_data_name {
+        line-height: 28px;
+    }
+
+    .one_cars_card_left_text_data {
+        line-height: 28px;
+    }
+
+    .cars_card_right_name {
+        padding: 10px;
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .cars_card_right_warning {
+        margin-top: 25px;
+    }
+
+    .swiper {
+        width: 400px;
+        height: auto;
+    }
+
+}
+
+
+
+@media only screen and (max-width:900px) {
+
+    .one_pages_title {
+        margin-bottom: 20px;
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .one_cars_card_left_name {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .swiper {
+        width: 300px;
+    }
+
+}
+
+
+@media only screen and (max-width:675px) {
+
+    .one_content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .one_cars_card_left {
+        width: 100%;
+        border-radius: 5px;
+        padding: 20px;
+        gap: 10px;
+
+    }
+
+    .one_cars_card_left_name {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .cars_card_right_name {
+        padding: 10px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .swiper {
+        width: 100%;
+        height: auto;
+    }
+
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+    }
+
+    .cars_card_right_images {
+        width: 100%;
+        height: auto;
+    }
+
 }

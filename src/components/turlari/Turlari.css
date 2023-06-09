@@ -91,3 +91,143 @@
     border-color: dodgerblue;
     transition: .5s;
 }
+
+
+@media only screen and (max-width:1300px) {
+
+    .turlari_container {
+        max-width: 100%;
+    }
+
+    .turlari_pages_title {
+        margin-bottom: 30px;
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    .turlari_content {
+        gap: 25;
+    }
+
+    .tur_card_content {
+        gap: 10px;
+    }
+
+    .tur_card {
+        gap: 0px;
+    }
+
+    .tur_card_images {
+        width: 100%;
+        height: 200px;
+    }
+
+    .tur_card_text_div {
+        gap: 0px;
+    }
+
+    .tur_card_name {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .tur_card_narxi {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .cars_like_shop_div {
+        gap: 10px;
+    }
+
+    .cars_shop_icons,
+    .cars_like_icons {
+        width: 80px;
+        font-size: 22px;
+    }
+}
+
+
+
+@media only screen and (max-width:1100px) {
+
+    .turlari_pages_title {
+        margin-bottom: 20px;
+        font-size: 36px;
+        line-height: 45px;
+    }
+
+    .turlari_content {
+        gap: 10;
+    }
+
+    .tur_card_images {
+        width: 100%;
+        height: 150px;
+    }
+
+    .tur_card_name {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .tur_card_narxi {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .cars_shop_icons,
+    .cars_like_icons {
+        width: 50px;
+        font-size: 18px;
+    }
+}
+
+
+@media only screen and (max-width:900px) {
+
+    .turlari_content {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+
+@media only screen and (max-width:768px) {
+
+    .turlari {
+        width: 100%;
+        padding: 0px 10px;
+    }
+}
+
+
+@media only screen and (max-width:650px) {
+
+    .turlari_content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .turlari_pages_title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+
+@media only screen and (max-width:400px) {
+
+    .turlari_content {
+        grid-template-columns: 1fr;
+    }
+
+    .turlari_pages_title {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    .tur_card_images {
+        width: 100%;
+        height: auto;
+    }
+}

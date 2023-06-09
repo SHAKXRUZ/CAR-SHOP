@@ -505,10 +505,29 @@
     transition: .5s;
 }
 
-.cars_delete_icons{
+.cars_delete_icons {
     color: red;
     font-size: 22px;
     cursor: pointer;
+}
+
+@media only screen and (max-width:1330px) {
+    .cars_edit_icons {
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width:1260px) {
+
+    .cars_data_map_gearbook,
+    .admin_cars_data_table_gearbook {
+        display: none;
+    }
+
+    .cars_data_map_id,
+    .admin_cars_data_table_id {
+        width: 20px;
+    }
 }
 
 @media only screen and (max-width:1200px) {
@@ -538,9 +557,25 @@
     }
 }
 
+@media only screen and (max-width:1040px) {
+
+    .cars_data_map_tanning,
+    .admin_cars_data_table_tanirovkasi {
+        display: none;
+    }
+}
+
 @media only screen and (max-width:930px) {
     .cars_search_form_input {
         width: 150px;
+    }
+}
+
+@media only screen and (max-width:860px) {
+
+    .cars_data_map_color,
+    .admin_cars_data_table_color {
+        display: none;
     }
 }
 
@@ -590,6 +625,16 @@
     }
 }
 
+@media only screen and (max-width:720px) {
+
+    .cars_data_map_walking,
+    .admin_cars_data_table_distance {
+        display: none;
+    }
+}
+
+
+
 @media only screen and (max-width:600px) {
 
     .admin_cars_modal_content {
@@ -626,6 +671,14 @@
     }
 }
 
+@media only screen and (max-width:520px) {
+
+    .cars_data_map_motor,
+    .admin_cars_data_table_motor {
+        display: none;
+    }
+}
+
 @media only screen and (max-width:500px) {
 
     .admin_cars_container {
@@ -655,5 +708,38 @@
     .admin_cars_modal_input_div {
         flex-direction: column;
         gap: 20px;
+    }
+}
+
+
+@media only screen and (max-width:410px) {
+
+    .cars_data_map_year,
+    .admin_cars_data_table_year {
+        display: none;
+    }
+
+    .admin_cars_data_table_marka,
+    .admin_cars_data_table_id {
+        display: none;
+    }
+
+    .cars_data_map_id,
+    .cars_data_map_name {
+        font-size: 12px;
+    }
+
+
+    .cars_edit_icons {
+        margin-right: 10px;
+        font-size: 18px;
+    }
+
+    .cars_delete_icons {
+        font-size: 19px;
+    }
+
+    .admin_cars_data_map::-webkit-scrollbar {
+        width: 0px;
     }
 }
