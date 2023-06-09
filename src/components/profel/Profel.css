@@ -5,12 +5,12 @@
 
 .profel_container {
     max-width: 1000px;
-    height: 700px;
+    height: 650px;
     margin: 0 auto;
-    border: 1px solid black;
 }
 
 .profel_header {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,7 +20,7 @@
 .user_profel_images {
     width: 100px;
     height: 100px;
-    border-bottom: 1px solid black;
+    border-radius: 50%;
 }
 
 .edit_profel_btn {
@@ -57,4 +57,40 @@
 
 .user_profel_text_div_title {
     font-weight: 700;
+}
+
+
+
+@media only screen and (max-width:768px) {
+    .profel {
+        width: 100%;
+        padding: 0px 10px;
+    }
+
+}
+
+
+@media only screen and (max-width:400px) {
+
+    .profel_container {
+        height: auto;
+    }
+
+    .profel_header {
+        margin-top: 50px;
+    }
+
+    .user_profel_images {
+        border-radius: 50%;
+    }
+
+    .edit_profel_btn {
+        width: 100px;
+        border-radius: 5px;
+    }
+
+    .user_profel_text_div {
+        flex-direction: column;
+        gap: 5px;
+    }
 }
