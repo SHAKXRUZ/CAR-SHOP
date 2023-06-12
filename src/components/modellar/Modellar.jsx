@@ -12,7 +12,7 @@ const Modellar = () => {
   const [categoriyData, setCategoriyData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/admin/categoriy_list", {
+    fetch("https://thoughtful-scrubs-boa.cyclic.app/admin/categoriy_list", {
       method: "GET",
       headers: {
         token: localStorage.getItem("token"),

@@ -43,7 +43,7 @@ const Categoriy = () => {
     const { title } = e.target;
 
     if (categoriy_images) {
-      await fetch("http://localhost:5000/admin/create_categoriy", {
+      await fetch("https://thoughtful-scrubs-boa.cyclic.app/admin/create_categoriy", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -73,7 +73,7 @@ const Categoriy = () => {
   const [categoriyData, setCategoriyData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/admin/categoriy_list", {
+    fetch("https://thoughtful-scrubs-boa.cyclic.app/admin/categoriy_list", {
       method: "GET",
       headers: {
         token: localStorage.getItem("token"),
@@ -88,7 +88,7 @@ const Categoriy = () => {
   const searchFunction = async (e) => {
     e.preventDefault();
     let { categoriy_search } = e.target;
-    await fetch("http://localhost:5000/admin/categoriy_search_api", {
+    await fetch("https://thoughtful-scrubs-boa.cyclic.app/admin/categoriy_search_api", {
       method: "GET",
       headers: {
         token: localStorage.getItem("token"),
@@ -139,7 +139,7 @@ const Categoriy = () => {
 
     const { update_title } = e.target;
 
-    await fetch("http://localhost:5000/admin/update_categoriy", {
+    await fetch("https://thoughtful-scrubs-boa.cyclic.app/admin/update_categoriy", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -162,7 +162,7 @@ const Categoriy = () => {
   };
 
   const deleteCategoriyFunc = async (c) => {
-    await fetch("http://localhost:5000/admin/categoriy_delete", {
+    await fetch("https://thoughtful-scrubs-boa.cyclic.app/admin/categoriy_delete", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

@@ -15,7 +15,7 @@ const Header = () => {
   const [user_images, setUser_images] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/users/profel_images", {
+    fetch("https://thoughtful-scrubs-boa.cyclic.app/users/profel_images", {
       method: "GET",
       headers: {
         token: localStorage.getItem("token"),
@@ -28,7 +28,7 @@ const Header = () => {
   const [basketData, setBasketData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/users/shop_list", {
+    fetch("https://thoughtful-scrubs-boa.cyclic.app/users/shop_list", {
       method: "GET",
       headers: {
         token: localStorage.getItem("token"),

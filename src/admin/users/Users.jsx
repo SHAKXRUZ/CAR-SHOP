@@ -17,7 +17,7 @@ const Users = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/users/list", {
+    fetch("https://thoughtful-scrubs-boa.cyclic.app/users/list", {
       method: "GET",
       headers: {
         token: localStorage.getItem("token"),
@@ -32,7 +32,7 @@ const Users = () => {
   const userSearchFunction = async (e) => {
     e.preventDefault();
     let { user_search } = e.target;
-    await fetch("http://localhost:5000/users/user_search_api", {
+    await fetch("https://thoughtful-scrubs-boa.cyclic.app/users/user_search_api", {
       method: "GET",
       headers: {
         token: localStorage.getItem("token"),
@@ -75,7 +75,7 @@ const Users = () => {
     const { update_username, update_email, update_password, update_role } =
       e.target;
 
-    await fetch("http://localhost:5000/admin/users_update", {
+    await fetch("https://thoughtful-scrubs-boa.cyclic.app/admin/users_update", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -115,7 +115,7 @@ const Users = () => {
   };
 
   const adminUserDeleteFunc = async (u) => {
-    await fetch("http://localhost:5000/admin/users_delete", {
+    await fetch("https://thoughtful-scrubs-boa.cyclic.app/admin/users_delete", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

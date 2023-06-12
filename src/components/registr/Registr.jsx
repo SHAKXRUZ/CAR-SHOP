@@ -38,7 +38,7 @@ const Registr = () => {
     const { username, email, password } = e.target;
 
     if (registrImages) {
-      await fetch("http://localhost:5000/users/registr", {
+      await fetch("https://thoughtful-scrubs-boa.cyclic.app/users/registr", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

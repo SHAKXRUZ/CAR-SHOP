@@ -13,7 +13,7 @@ const AdminHeader = () => {
   const [user_images, setUser_images] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/users/profel_images", {
+    fetch("https://thoughtful-scrubs-boa.cyclic.app/users/profel_images", {
       method: "GET",
       headers: {
         token: localStorage.getItem("token"),

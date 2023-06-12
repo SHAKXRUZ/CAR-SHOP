@@ -16,7 +16,7 @@ const Turlari = () => {
   const [carsData, setCarsData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/admin/cars_list", {
+    fetch("https://thoughtful-scrubs-boa.cyclic.app/admin/cars_list", {
       method: "GET",
       headers: {
         token: localStorage.getItem("token"),
@@ -31,7 +31,7 @@ const Turlari = () => {
   };
 
   const carsBasketFunc = async (c) => {
-    await fetch("http://localhost:5000/users/cars_shop", {
+    await fetch("https://thoughtful-scrubs-boa.cyclic.app/users/cars_shop", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

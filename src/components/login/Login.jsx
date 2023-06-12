@@ -8,7 +8,7 @@ const Login = () => {
     e.preventDefault();
     const { email, password } = e.target;
 
-    await fetch("http://localhost:5000/users/login", {
+    await fetch("https://thoughtful-scrubs-boa.cyclic.app/users/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
