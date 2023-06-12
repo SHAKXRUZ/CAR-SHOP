@@ -11,7 +11,7 @@ const Cars = () => {
   const [carsSearchData, setCarsSearchData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/admin/categoriy_list", {
+    fetch("https://thoughtful-scrubs-boa.cyclic.app/admin/categoriy_list", {
       method: "GET",
       headers: {
         token: localStorage.getItem("token"),
@@ -22,7 +22,7 @@ const Cars = () => {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/admin/cars_list", {
+    fetch("https://thoughtful-scrubs-boa.cyclic.app/admin/cars_list", {
       method: "GET",
       headers: {
         token: localStorage.getItem("token"),
@@ -35,7 +35,7 @@ const Cars = () => {
   const carsSearchFunction = async (e) => {
     e.preventDefault();
     let { cars_search } = e.target;
-    await fetch("http://localhost:5000/admin/cars_search_api", {
+    await fetch("https://thoughtful-scrubs-boa.cyclic.app/admin/cars_search_api", {
       method: "GET",
       headers: {
         token: localStorage.getItem("token"),
@@ -137,7 +137,7 @@ const Cars = () => {
     } = e.target;
 
     if (carsIchkiMakon && carsTashqiMakon && carsTuriMakon) {
-      await fetch("http://localhost:5000/admin/create_cars", {
+      await fetch("https://thoughtful-scrubs-boa.cyclic.app/admin/create_cars", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -186,7 +186,7 @@ const Cars = () => {
   };
 
   const deleteCarsFunc = async (c) => {
-    await fetch("http://localhost:5000/admin/cars_delete", {
+    await fetch("https://thoughtful-scrubs-boa.cyclic.app/admin/cars_delete", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -304,7 +304,7 @@ const Cars = () => {
       update_deseriptioni,
     } = e.target;
 
-    await fetch("http://localhost:5000/admin/update_cars", {
+    await fetch("https://thoughtful-scrubs-boa.cyclic.app/admin/update_cars", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

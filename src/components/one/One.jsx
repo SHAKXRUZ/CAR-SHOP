@@ -25,7 +25,7 @@ const One = () => {
   const [carsData, setCarsData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/admin/cars_list", {
+    fetch("https://thoughtful-scrubs-boa.cyclic.app/admin/cars_list", {
       method: "GET",
       headers: {
         token: localStorage.getItem("token"),
@@ -38,7 +38,7 @@ const One = () => {
   const [categoriyData, setCategoriyData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/admin/categoriy_list", {
+    fetch("https://thoughtful-scrubs-boa.cyclic.app/admin/categoriy_list", {
       method: "GET",
       headers: {
         token: localStorage.getItem("token"),

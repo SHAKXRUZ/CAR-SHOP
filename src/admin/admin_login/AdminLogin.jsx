@@ -17,7 +17,7 @@ const AdminLogin = () => {
     e.preventDefault();
     const { admin_email, admin_password } = e.target;
 
-    await fetch("http://localhost:5000/admin/login", {
+    await fetch("https://thoughtful-scrubs-boa.cyclic.app/admin/login", {
       method: "POST",
       headers: { "Content-Type": "application/json", token: tokens },
       body: JSON.stringify({

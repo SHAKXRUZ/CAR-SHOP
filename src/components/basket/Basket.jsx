@@ -5,7 +5,7 @@ const Basket = () => {
   const [basketData, setBasketData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/users/shop_list", {
+    fetch("https://thoughtful-scrubs-boa.cyclic.app/users/shop_list", {
       method: "GET",
       headers: {
         token: localStorage.getItem("token"),
@@ -16,7 +16,7 @@ const Basket = () => {
   }, []);
 
   const carsShopDelete = async (b) => {
-    await fetch("http://localhost:5000/users/shop_delete", {
+    await fetch("https://thoughtful-scrubs-boa.cyclic.app/users/shop_delete", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

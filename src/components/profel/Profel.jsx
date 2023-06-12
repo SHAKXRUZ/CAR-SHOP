@@ -12,7 +12,7 @@ const Profel = () => {
   const [u, setUserData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/users/one_user", {
+    fetch("https://thoughtful-scrubs-boa.cyclic.app/users/one_user", {
       method: "GET",
       headers: {
         token: localStorage.getItem("token"),
@@ -53,7 +53,7 @@ const Profel = () => {
     e.preventDefault();
     const { profel_username, profel_email, profel_password } = e.target;
 
-    await fetch("http://localhost:5000/users/edit_profel", {
+    await fetch("https://thoughtful-scrubs-boa.cyclic.app/users/edit_profel", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
